@@ -25,7 +25,7 @@ def take_picture():
 
 def stop_program(swipe):
     global continue_program
-    if swipe.distance >= 2:
+    if swipe.distance >= 1.5:
         cam.stop_preview()
         continue_program = False
         bd.stop()
