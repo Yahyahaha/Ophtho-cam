@@ -44,12 +44,12 @@ def record_video():
         started_video = False
         recent_ended_video = True
         print("stopped video. started_video=", started_video)
-        bd.color = "red"
+        bd.color = "blue"
     else:
         cam.start_recording('/home/pi/Videos/video_' + time.strftime("%Y-%m-%d_%H-%M-%S") + '.h264')
         started_video = True
         print("started video. started_video=", started_video)
-        bd.color = "blue"
+        bd.color = "red"
 
 
 bd = BlueDot(cols=1, rows=2)
