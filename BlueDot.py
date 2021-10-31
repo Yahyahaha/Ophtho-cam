@@ -49,7 +49,7 @@ def record_video():
         cam.start_recording('/home/pi/Videos/video_' + time.strftime("%Y-%m-%d_%H-%M-%S") + '.h264')
         started_video = True
         print("started video. started_video=", started_video)
-        bd.color = "red"
+        bd[0,1].color = "red"
 
 
 bd = BlueDot(cols=1, rows=2)
