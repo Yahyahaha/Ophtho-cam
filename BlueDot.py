@@ -45,7 +45,7 @@ def record_video():
         recent_ended_video = True
         print("stopped video. started_video=", started_video)
     else:
-        cam.start_recording('/home/pi/Videos/video_' + time.strftime("%Y-%m-%d_%H-%M-%S") + '.h264')
+        cam.start_recording('/home/pi/Videos/video_' + time.strftime("%Y-%m-%d_%H-%M-%S") + '.mp4')
         started_video = True
         print("started video. started_video=", started_video)
 
