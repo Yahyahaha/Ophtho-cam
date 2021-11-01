@@ -47,7 +47,7 @@ def record_video():
         print("stopped video. started_video=", started_video)
         bd.color = "blue"
         print("Converting Video")
-        command = "MP4Box -add (time.strftime("%Y-%m-%d_%H-%M-%S")).h264 (time.strftime("%Y-%m-%d_%H-%M-%S")).mp4"
+        command = "MP4Box -add time.strftime("%Y-%m-%d_%H-%M-%S").h264 time.strftime("%Y-%m-%d_%H-%M-%S").mp4"
         call ([command], shell=True)
         print ("Video converted")
     else:
