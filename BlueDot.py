@@ -2,6 +2,7 @@ from bluedot import BlueDot
 from picamera import PiCamera
 from signal import pause
 from subprocess import call
+from time import sleep
 import time
 import os
 
