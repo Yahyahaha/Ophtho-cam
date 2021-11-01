@@ -1,6 +1,7 @@
 from bluedot import BlueDot
 from picamera import PiCamera
 from signal import pause
+from subprocess import call
 import time
 import os
 
@@ -45,6 +46,10 @@ def record_video():
         recent_ended_video = True
         print("stopped video. started_video=", started_video)
         bd.color = "blue"
+        print("Converting Video")
+        command = "MP4Box -add (time.strftime("%Y-%m-%d_%H-%M-%S")).h264 (time.strftime("%Y-%m-%d_%H-%M-%S")).mp4"
+        call ([command], shell=True)
+        print ("Video converted")
     else:
         cam.start_recording('/home/pi/Videos/video_' + time.strftime("%Y-%m-%d_%H-%M-%S") + '.h264')
         started_video = True
